@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style/editor-hacker.css" />
+
+    <title>Online Editor</title>
+  </head>
+  <body onload="showPreview()">
+    <div class="code-area">
+      <div
+        style="
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: Arial;
+          padding: 10px;
+        "
+        class="header-title"
+      >
+        cochocco online editor
+        <sub style="font-weight: normal; font-size: 10px">beta</sub>
+      </div>
+      <textarea id="htmlCode" placeholder="HTML" oninput="showPreview()">
+<h3>Welcome to cochocco !</h3>
+    </textarea
+      >
+      <textarea id="cssCode" placeholder="CSS" oninput="showPreview()">
+h3 {
+    color: red;
+    font-weight: bold; 
+    font-family: Arial; 
+    text-align: center;  
+}
+    </textarea
+      >
+      <textarea id="jsCode" placeholder="JS" oninput="showPreview()">
+document.querySelector('h3').addEventListener('click', () => {
+    alert('Welcome to cochocco !')
+})
+    </textarea
+      >
+    </div>
+    <div class="preview-area">
+      <iframe src="" id="preview-window"></iframe>
+    </div>
+  </body>
+  <script src="../script/editor.js"></script>
+</html>
